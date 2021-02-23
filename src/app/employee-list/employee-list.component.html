@@ -6,6 +6,7 @@
     <tr>
       <th>Nome</th>
       <th>Salario</th>
+      <th>Bônus</th>
     </tr>
   </thead>
     
@@ -17,6 +18,7 @@
            [style.color]="getSalaryColor(employee)"></td> -->
         <td [innerHtml]="employee.salary" 
            [ngClass]="{'salary-expensive': employee.salary > 20000, 'salary-cheap': employee.salary < 1000}"></td>
+          <td>{{employee.bonus}}</td>
     </tr>    
   </tbody>
 

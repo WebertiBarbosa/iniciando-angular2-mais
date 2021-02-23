@@ -11,6 +11,7 @@ export class EmployeeNewComponent implements OnInit {
 
   name = ''
   salary = 0
+  bonus = 0
   employees = employees
 
   constructor() { 
@@ -22,8 +23,9 @@ export class EmployeeNewComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addEmployee(){
-    this.employees.push({name:this.name, salary:this.salary})
+  addEmployee(event){
+    const bonus = this.salary >= 1000 ? 0 : this.bonus
+    this.employees.push({name:this.name, salary:this.salary, bonus: bonus})
     console.log(this.employees)
   }
 
