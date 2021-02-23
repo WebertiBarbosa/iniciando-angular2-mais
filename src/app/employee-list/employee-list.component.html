@@ -12,7 +12,7 @@
     
   
   <tbody>
-    <tr  *ngFor="let employee of employees; let i=index;" [id]=" 'tr' + i ">
+    <tr  *ngFor="let employee of employeeService.employees; let i=index;" [id]=" 'tr' + i ">
        <td [innerHtml]="employee.name"></td>
        <!-- <td [innerHtml]="employee.salary" 
            [style.color]="getSalaryColor(employee)"></td> -->
